@@ -99,9 +99,9 @@ In hac habitasse platea dictumst. Sed ultrices venenatis nunc et eleifend. Praes
 ### Side by side
 To achieve two images side by side use, make sure the width for each is 48%. (It's less than 50% to make room for margins.) **Note that you use `class="left"` for both images so they simply stack horizontally left to right.**
 
-{% include figure.html class="left" width="50%" image-path="/assets/images/default.jpg" caption="Here's an image on the left."%}
+{% include figure.html class="left" width="48%" image-path="/assets/images/default.jpg" caption="Here's an image on the left."%}
 
-{% include figure.html class="left" width="50%" image-path="/assets/images/default.jpg" caption="Here's an image on the right."%}
+{% include figure.html class="left" width="48%" image-path="/assets/images/default.jpg" caption="Here's an image on the right."%}
 
 <p style="clear:both"></p>
 
@@ -110,21 +110,23 @@ To achieve two images side by side use, make sure the width for each is 48%. (It
 ```
 {% include figure.html
 class="left"
-width="49%"
+width="48%"
 caption="Here's an image on the left."
 image-path="/assets/images/default.jpg"
 %}
 
 {% include figure.html
 class="left"
-width="49%"
+width="48%"
 caption="Here's an image on the right."
 image-path="/assets/images/default.jpg"
 %}
+
+<p style="clear:both"></p>
 ```
 {%endraw%}
 
-
+Note there is a little bit of code `<p style="clear:both"></p>` that makes sure you don't get a little text showing up just to the right of the images, and that text always starts below both images.
 
 
 
@@ -178,8 +180,8 @@ The following code supplies a simple `image1`, `image2`, and optional caption.
 
 ```
 {%raw%}{% include juxtapose.html
-image1="/essays/forest/images/mvh-tv-room.jpg"
-image2="/essays/forest/images/mvh-hist-common-room.jpg"
+image1="/scrollstories/forest/images/mvh-tv-room.jpg"
+image2="/scrollstories/forest/images/mvh-hist-common-room.jpg"
 caption="These sliders are way more effective the more closely you line up the before and after images."
 %}{%endraw%}
 ```
@@ -187,8 +189,8 @@ caption="These sliders are way more effective the more closely you line up the b
 
 
 {% include juxtapose.html
-image1="/essays/forest/images/mvh-tv-room.jpg"
-image2="/essays/forest/images/mvh-hist-common-room.jpg"
+image1="/scrollstories/forest/images/mvh-tv-room.jpg"
+image2="/scrollstories/forest/images/mvh-hist-common-room.jpg"
 caption="From the TV room to the Chair room (actually, the History Department Common Room). With a less good view of the mountains."
 %}
 
@@ -211,9 +213,9 @@ The following code generates the slide deck just below. Be sure to just copy and
 ```
 {%raw%}{% 
 assign images = 
-"/essays/mesa-vista-hall/images/mvh-construction.jpg,
-/essays/mesa-vista-hall/images/mvh-room-cost.jpg,
-/essays/mesa-vista-hall/images/mvh-tv-room.jpg" | split: ','
+"/scrollstories/mesa-vista-hall/images/mvh-construction.jpg,
+/scrollstories/mesa-vista-hall/images/mvh-room-cost.jpg,
+/scrollstories/mesa-vista-hall/images/mvh-tv-room.jpg" | split: ','
 %}
 
 {% 
@@ -241,9 +243,9 @@ captions = captions
 
 {% 
 assign images = 
-"/essays/forest/images/mvh-construction.jpg,
-/essays/forest/images/mvh-room-cost.jpg,
-/essays/forest/images/mvh-tv-room.jpg" | split: ','
+"/scrollstories/forest/images/mvh-construction.jpg,
+/scrollstories/forest/images/mvh-room-cost.jpg,
+/scrollstories/forest/images/mvh-tv-room.jpg" | split: ','
 %}
 
 {% 
@@ -273,7 +275,9 @@ captions = captions
 
 
 ## That's a wrap 
-That's all for basic images! We can also do [background scrollboxes](bg-scrollbox), [background switching](bg-switch), and [side scrolling](side-scroll).
+That's all for basic images! 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas augue sed malesuada ornare. Aliquam dignissim at est vel sagittis. Curabitur ornare nec nulla in mollis. Phasellus in lacinia mi. Vivamus vel odio imperdiet, faucibus urna id, egestas mi. Donec venenatis ut elit volutpat cursus. Sed vel quam nec nunc ornare vestibulum. Donec placerat, ipsum vel dignissim convallis, enim lorem pharetra est, id eleifend mauris magna commodo ligula. Sed et pharetra quam. Nullam imperdiet nisl vitae sapien vehicula, eu faucibus lectus semper. Proin nec sollicitudin orci. Vivamus sit amet nulla posuere, rutrum libero eget, porta mi. Duis gravida nisl mollis ligula tempor, vitae sodales turpis pretium. In auctor enim non mauris ornare, nec suscipit ligula venenatis.
+We can also do [background scrollboxes](bg-scrollbox), [background switching](bg-switch), and [side scrolling](side-scroll).
+
+If you are having trouble getting your image to appear, you're not the first one to have this problem! It's a common issue for folks dipping their toes into coding. Hop over to our [troubleshooting page](../guides/troubleshooting). Probably, the image PATH and/or FILENAME does not match exactly where your image is located or the name of the file.
 

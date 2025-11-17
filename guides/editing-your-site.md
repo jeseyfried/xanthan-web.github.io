@@ -7,12 +7,6 @@ date: 2019-10-03
 
 # {{page.title}}
 
-<!--
-### Table of Contents
-* TOC
-{:toc}
--->
-
 Here are the basic process for editing a page and adding a new page. All steps start from your repository home page in GitHub.
 
 ## Editing a page
@@ -47,7 +41,8 @@ Now we need to add the new page to the navigation bar. Xanthan makes it easy to 
 ---
 
 ## Moving files
+Moving files within the GitHub interface is a bit annoying; the platform is really not designed for it. 
 - Go into edit mode for the file you want to move
-- Click on the filename at the top of the edit pane --- this is called the file PATH
-- You can make this path into whatever you want `/` to create new folders.
+- Click on the filename at the top of the edit pane --- this is called the file PATH, and it tells GitHub where the file should be relative to your repository root folder.
+- You can make this path into whatever you want; use `/` to create new folders.
 - If you in the edit textbox and you want to edit something that appears before the textbox, just put the curson on the far left of the textbox and hit backspace or delete and you'll be able to edit it. 

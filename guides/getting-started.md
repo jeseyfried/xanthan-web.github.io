@@ -13,15 +13,13 @@ This page specifies the steps necessary to create your own website, which  **tak
 
 <style>
 .setup-selector {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin: 2rem 0;
-  flex-wrap: wrap;
 }
 
 .setup-option {
-  flex: 1;
-  min-width: 200px;
   padding: 1.5rem;
   border: 2px solid #ddd;
   border-radius: 8px;
@@ -60,6 +58,13 @@ This page specifies the steps necessary to create your own website, which  **tak
   font-weight: 600;
   color: var(--text-link, #007bff);
 }
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .setup-selector {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 
 <div class="setup-selector">
@@ -80,6 +85,13 @@ This page specifies the steps necessary to create your own website, which  **tak
     <h3>Class Project</h3>
     <p>Gather and display student work for a collaborative project</p>
   </label>
+
+  <label class="setup-option" for="option-scrollstory">
+    <input type="radio" name="template" id="option-scrollstory" value="scrollstory">
+    <h3>Scrollstory</h3>
+    <p>A simple site for displaying a research story</p>
+  </label>
+
 </div>
 
 <script>
@@ -103,7 +115,13 @@ document.addEventListener('DOMContentLoaded', function() {
       name: 'Class Project',
       repo: 'amaranth-unm/class-project-template',
       url: 'http://github.com/amaranth-unm/class-project-template'
+    },
+    'scrollstory': {
+      name: 'Scrollstory',
+      repo: 'amaranth-unm/scrollstory-template',
+      url: 'http://github.com/amaranth-unm/scrollstory-template'
     }
+
   };
   
   // Add click handlers to option labels

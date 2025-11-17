@@ -136,6 +136,7 @@ IMAGES
 figure {
   /* Box Model */
   margin: 0;
+  margin-bottom: var(--spacing-md);
   
   /* Positioning */
   clear: none;
@@ -148,6 +149,7 @@ figure {
   /* Box Model */
   margin-left: var(--spacing-lg);
   margin-right: 0;
+  margin-bottom: var(--spacing-md);
   
   /* Typography */
   text-align: left;
@@ -159,13 +161,21 @@ figure {
   
   /* Box Model */
   margin-left: 0;
-  margin-right: var(--spacing-lg);
+  margin-right: 1rem;
+  margin-bottom: var(--spacing-md);
 }
 
 .center {
+  /* Display */
+  display: block;
+  
   /* Box Model */
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: var(--spacing-md);
+  
+  /* Positioning */
+  clear: both;
   
   /* Typography */
   text-align: center;

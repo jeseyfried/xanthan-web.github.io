@@ -9,13 +9,17 @@
       url: "/guides/understanding-pages"
     - title: "Editing Your Site"
       url: "/guides/editing-your-site"
-    - title: "Adding Images"
+    - title: "Adding Images"    
       url: "/guides/adding-images"
+    - title: "Working Locally"    
+      url: "/guides/working-locally"
     - title: "Troubleshooting"
       url: "/guides/troubleshooting"
 
 - title: "Navigation"
   items:
+    - title: "Top Navbar"
+      url: "/navigation/top-nav"
     - title: "Cards"
       url: "/navigation/cards"
     - title: "Left Navbar Demo"

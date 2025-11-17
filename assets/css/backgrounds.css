@@ -15,8 +15,12 @@ BACKGROUNDs
 
 /* Styling the scrolling text box */
 .bg-text-box {
+  /* Positioning */
+  position: relative;
+  z-index: 1;
+  
   /* Box Model */
-  max-width: 40rem;
+  max-width: 30rem;
   margin: var(--spacing-lg) auto;
   padding: var(--spacing-md) var(--spacing-lg);
   
