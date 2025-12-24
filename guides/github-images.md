@@ -18,7 +18,6 @@ This looks like a lot of steps, but they all take 3 seconds. Assuming you alread
 - Click the `Commit Change` button
 - Click the pencil icon to edit your image
 - Update the path just above the edit window (use backspace and / to edit the path)
-- Usually it's best to keep images in your `/assets/images/` folder
 
 
 ## Referencing your image

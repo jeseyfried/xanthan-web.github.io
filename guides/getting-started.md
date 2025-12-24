@@ -5,11 +5,14 @@ date: 2025-10-07
 ---
 
 # Getting Started
-Our base website template is called Xanthan. It's like a sourdough starter that's meant to spawn variants. But you probably only want to use a subset bit of Xanthan functionality for your site. To make things simpler and easier to learn, we've creeated a few different starter templates suited for common purposes.
 
-There's nothing special about these templates other than they come with a few pages and navbars that suit the point of the template. You can edit everything later on---adding/renaming/deleting pages and folder, changing the navigation bar, adding images, and of course changing the text and style. 
 
-This page specifies the steps necessary to create your own website, which  **takes about 10 minutes**.
+**This guide walks you through setting up your site in about 10 minutes.** After that, you'll be ready to customize it with your own content.
+
+## Your First Site
+Xanthan starts you with a pre-built website. Think of it like getting a blank canvas with some basic brushes already included. When you edit files, GitHub automatically publishes your changes—usually within 1–2 minutes. You don't upload files to a server or manage hosting. It's all handled for you.
+
+We've created a few starter templates (Portfolio, Scrollstory, Class Project) because not everyone needs all the features. Pick one that matches what you want to build, and you can add or remove features later. Selecting a template below updates the URLs for the instructions to make things a bit easier.
 
 <style>
 .setup-selector {
@@ -166,6 +169,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+
+## Introducting GitHub
+
+**GitHub** is a platform where people store and collaborate on code and projects. It's kind of like Google Drive, but instead of storing any kind of file, GHitHub stores plain text files that get turned into a website. In short: GitHub lets you build and host a website without paying for hosting, seeing lots of ads, or learning complicated technical skills.
+
+
+
 ### Create an account at GitHub
 - Create an account at [GitHub](http://github.com/register). Whatever username you choose will be referred to below as GITHUB_USERNAME.
 - Once you've gone through the confirmation process, make sure you are at your account home page. The URL will look like http://github.com/GITHUB_USERNAME.
@@ -184,8 +194,8 @@ If you named your repository something other than <span class="template-repo-nam
 - Edit `_config.yml` file to have the same `baseurl` as your repository name. 
 - Commit your change with the green Commit button.
 
-### Enable GitHub Pages
-Now that your have your starter files, we just need to tell GitHub that you want to use your repository to build a website.
+### Enable Your Website
+Now that your have your starter files, we just need to tell GitHub that you want to use your repository to build a website. This functionality is called `GitHub Pages`.
 - Click on the `Settings` tab in the upper right of the nav bar. 
 - On the left, click the link for `Pages`.
 - Near the top, under the Build & Deployment section, under `Source`, the `Deploy from a Branch` should be selected.

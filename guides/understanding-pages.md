@@ -8,10 +8,14 @@ date: 2019-10-03
 # Understanding Pages
 
 ## Anatomy of a Page
-To understand the basics of how pages work, let's examine and make a small change to your homepage, the `index.md` file. Open this file in your text editor.
+To understand the basics of how pages work, let's look at your homepage, the `index.md` file, directly on GitHub:
 
-### YAML headers
-You'll notice the file begins with something like
+1. From your repository's home page on GitHub, find and click `index.md` in the file list.
+2. Click the "Preview" tab (if available) to see how it renders, or click the pencil icon to view it in GitHub’s editor (we won’t change anything yet).
+3. Scroll to notice the small box at the very top—this is the page label described below.
+
+### The Page Label (YAML Header)
+Every page starts with a small box that looks like this:
 
 ``` markdown
 ---
@@ -21,17 +25,29 @@ date: 2024-12-02
 ---
 ```
 
-This is called a YAML header. All pages must have a similar metadata block at the very top, with the title customized for each page. For now, it is enough to know that this block of metadata tells GitHub Pages that it should be part of your website. **Be sure you have the 3 hyphens `---` before and after your metadata on their own lines**.
+**Why this exists:** Think of it like a label on a folder. It tells GitHub Pages:
+- What to call your page (`title`)
+- How to style it (`layout`)
+- When you created it (`date`)
 
-The index page uses the `base` layout.
+Without this label, GitHub won't know your page is part of your website.
+
+**Important:** Always keep the three hyphens `---` before and after your label, on their own lines.
+
+The `base` layout is the standard page style used by most of your pages. Other layouts (like `scrollstory` or `left-nav`) change how the page looks.
 
 
-### Markdown
-One of the great features of GitHub Pages is that it allows you to write pages in Markdown rather than HTML. If you are new to Markdown, complete this [Markdown tutorial](https://www.markdowntutorial.com/). If you need syntax help, check out this [cheat sheet](https://www.markdownguide.org/cheat-sheet).
+### Writing Content with Markdown
 
+**Why Markdown?** It's simpler than HTML. You can write plain text with a few simple symbols for formatting:
+- `# Heading` becomes a big title
+- `**bold**` becomes bold text
+- `[link text](url)` becomes a clickable link
 
-#### Previewing Markdown
-If you want to write online and preview your Markdown text as you write, use [Dillinger](https://dillinger.io/). It saves your work as you go. When you are done writing, you can simply copy and paste your text from Dillinger into the edit window on GitHub. Once you get used to the syntax, you won't need to preview it---you can just write!
+If you're new to Markdown, spend 5 minutes on this [Markdown tutorial](https://www.markdowntutorial.com/). If you forget syntax, check this [cheat sheet](https://www.markdownguide.org/cheat-sheet).
+
+#### Want to Preview Before Publishing?
+If you want to see what your page will look like as you write, use [Dillinger](https://dillinger.io/). Write there, preview instantly, then copy/paste your text into GitHub when you're done. Once you get comfortable with Markdown, you won't need to preview—you'll just write directly in GitHub.
 
 ---
 
