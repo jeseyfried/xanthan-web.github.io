@@ -2,8 +2,7 @@
 /* Load after all other CSS files like base.css, typography.css, nav.css, cards.css */
 /* Overrides base variables and specific elements */
 
-/* Theme-specific fonts (Inter already imported in base.css) */
-@import url('https://fonts.googleapis.com/css2?family=Futura:wght@400;700&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Futura:wght@400;700&family=Inter:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap');
 
 /*****************************************************
 THEME VARIABLES - Override base.css :root
