@@ -22,9 +22,9 @@ summary: Perfect for beginners getting comfortable with Markdown and digital ess
 We can use this data to automatically generate links to the essays, like this: 
 
 
-{% assign card_pages = site.pages | where_exp: "page", "page.path contains 'scrollstories/'" %}
+{% assign card_pages = site.pages | where_exp: "page", "page.path contains 'scrollstories/examples'" %}
 
-{% include card-toc.html rows = card_pages %}
+{% include nav/card-toc.html rows = card_pages %}
 
 
 
@@ -33,7 +33,7 @@ It's not magic! We just need to tell Xanthan to create some links based on the m
 ```
 {%raw%}{% assign card_pages = site.pages | where_exp: "page", "page.path contains 'scrollstories/'" %}
 
-{% include card-toc.html rows = card_pages %}{%endraw%}
+{% include nav/card-toc.html rows = card_pages %}{%endraw%}
 ```
 
 - First, we define a variable called `card_pages` (it could be called anything) that gathers all the metadata  from the files in the essays folder. That's what the `page.path contains 'scrollstories/'` part does. 
@@ -49,33 +49,11 @@ A little fancier than a ToC-style list, we can a generate of a stack of horizont
 ```
 {%raw%}{% assign stacked_cards = site.pages | where_exp: "page", "page.path contains 'scrollstories/'" %}
 
-{% include card-stack.html cards = stacked_cards %}{%endraw%}
+{% include nav/card-stack.html cards = stacked_cards %}{%endraw%}
 ```
 
 {% assign stacked_cards = site.pages | where_exp: "page", "page.path contains 'scrollstories/'" %}
-{% include card-stack.html cards = stacked_cards %}
-
-
-### Optional Tags
-You can group and label similar content with tags in page metadata. Let's say you have a set of podcasts from a personal podcast or class project, and you want to a make a list of those. 
-
-To keep things organized (always good practice!), I put pages that describe and present the podcast in a `podcasts` folder. It's always good to use semantically useful folder names, and avoid mysteries like `mystuff-2`. 
-
-```
----
-title: My First Podcast
-author: Fred Gibbs
-summary: This is my first episode summary. Delicious!
-tags:
-  - history
-  - technology
-  - education
----
-```
-
-{% assign podcasts = site.pages | where_exp: "page", "page.path contains 'podcasts/'" %}
-{% include card-stack.html cards = podcasts %}
-
+{% include nav/card-stack.html cards = stacked_cards %}
 
 
 ---
@@ -86,11 +64,11 @@ You can see more cards at a glance if you use a grid layout with slightly smalle
 ```
 {%raw%}{% assign stories = site.pages | where_exp: "page", "page.path contains 'scrollstories/'" %}
 
-{% include card-grid.html cards = stories %}{%endraw%}
+{% include nav/card-grid.html cards = stories %}{%endraw%}
 ```
 
 {% assign essays = site.pages | where_exp: "page", "page.path contains 'scrollstories/'" %}
-{% include card-grid.html cards = essays %}
+{% include nav/card-grid.html cards = essays %}
 
 You can easily customize how the cards appear depending on what kind of content you want to display in them. 
 

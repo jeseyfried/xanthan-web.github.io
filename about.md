@@ -1,6 +1,7 @@
 ---
 title: About
 layout: base
+summary: Learn why Xanthan is built on stable, open-source technologies designed for long-term digital scholarship and academic independence.
 ---
 
 # About 
@@ -13,4 +14,28 @@ For emerging academics, a stable digital footprint is not just a convenience—i
 
 A sustainable website also signals to collaborators, hiring committees, and community partners that you take stewardship of your work seriously. Instead of ephemeral links or platform-bound projects, you can point to a consistent, well-curated portfolio that reflects your scholarly voice. In a field where openness, accessibility, and public engagement are central values, owning your own digital space can be a quiet but powerful form of academic agency.
 
-Xanthan is designed to support that agency. It gives you a long-lasting foundation to build on, a flexible workshop for creative experimentation, and a publishing model that aligns with the principles of open scholarship. Whether you’re drafting your first digital exhibit or building a long-term research hub, Xanthan provides a reliable place for your work to grow.
+Xanthan is designed to support that agency. It gives you a long-lasting foundation to build on, a flexible workshop for creative experimentation, and a publishing model that aligns with the principles of open scholarship. Whether you're drafting your first digital exhibit or building a long-term research hub, Xanthan provides a reliable place for your work to grow.
+
+---
+
+## Project Origins
+
+Xanthan was created by [Fred Gibbs](https://fredgibbs.net) at the University of New Mexico as part of ongoing research into sustainable, accessible digital infrastructure for humanities scholarship. The project emerged from years of teaching digital methods and watching students struggle with platform lock-in, unsustainable subscription models, and tools that taught them nothing about how the web actually works.
+
+The goal was to create something different: a toolkit that respects both beginners and the complexity of scholarly work, that teaches transferable skills while producing professional results, and that will still work decades from now without constant maintenance or subscription fees.
+
+Xanthan is developed under UNM's [Amaranth Digital Humanities Studio](https://amaranth.unm.edu) and released as open source (GPL-3.0) to encourage adaptation, contribution, and community growth.
+
+### Get Involved
+
+Xanthan welcomes contributions from humanists, developers, educators, and anyone interested in making digital scholarship more accessible. Whether you:
+
+- Fix documentation typos
+- Add new components or features
+- Share how you're using Xanthan in your work
+- Suggest improvements or report issues
+- Help other users in discussions
+
+...you're helping build better infrastructure for humanities work.
+
+See our [contributing guide](https://github.com/xanthan-web/xanthan-web.github.io/blob/main/CONTRIBUTING.md) to get started, or join the conversation in [GitHub Discussions](https://github.com/xanthan-web/xanthan-web.github.io/discussions).

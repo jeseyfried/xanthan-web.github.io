@@ -1,0 +1,20 @@
+{
+  "name": "xanthan-demo-scripts",
+  "version": "1.0.0",
+  "description": "Puppeteer scripts for recording Xanthan tutorial videos",
+  "main": "github-workflow-demo.js",
+  "scripts": {
+    "demo": "node github-workflow-demo.js"
+  },
+  "keywords": [
+    "puppeteer",
+    "demo",
+    "github",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  }
+}

@@ -1,1 +1,3 @@
-baseurl: /xanthan/
+# Xanthan Configuration
+version: 1.0.0
+baseurl:

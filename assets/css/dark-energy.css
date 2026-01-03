@@ -1,260 +1,484 @@
 /* === Dark Energy Theme === */
-/* Load after all other CSS files like base.css, typography.css, nav.css, cards.css */
-/* Overrides base variables and specific elements */
+/*
+  Load this AFTER base.css, typography.css, nav.css, and cards.css in page-header.html
 
-/* Theme-specific fonts (Inter already imported in base.css) */
-@import url('https://fonts.googleapis.com/css2?family=Futura:wght@400;700&family=Space+Mono:wght@400;700&display=swap');
+  This theme demonstrates how to create a dark theme by:
+  1. Overriding CSS variables from base.css with dark colors
+  2. Customizing specific elements that need visual changes beyond color swaps
+
+  LEARNING TIP: This file only includes what's different from the base theme.
+  Everything else is inherited from base.css, typography.css, nav.css, and cards.css.
+*/
+
+/* Theme-specific font */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 /*****************************************************
-THEME VARIABLES - Override base.css :root
+CSS VARIABLE OVERRIDES
 *****************************************************/
 :root {
-  /* Dark Energy Color Palette */
+  /* ===== Dark Energy Color Palette ===== */
   --charcoal: #1C1C1C;
   --navy: #0E1A2B;
-  --cream: #c6c4bd;
+  --cream: #C6C4BD;
+  --silver: #BCBCBC;
   --red: #D62828;
-  --ochre: hsl(48, 100%, 44%);
+  --ochre: #FCBF00;
   --teal: #009FB7;
-  --sage: #A3B18A;
+  --code-bg-dark: #1f2d3d;
+  --code-text-light: #b4c2d6;
 
-  /* Override base color mappings */
-  --bg-primary: var(--navy);
-  --bg-secondary: var(--charcoal);
-  --bg-tertiary: var(--charcoal);
-  --text-primary: var(--cream);
-  --text-secondary: #bcbcbc;
-  --text-tertiary: var(--cream);
+  /* ===== Override Base Theme Variables ===== */
+  /* These MUST match variable names in base.css */
+
+  /* Backgrounds */
+  --bg-page: var(--navy);
+  --bg-card: var(--charcoal);
+  --bg-code: var(--code-bg-dark);
+  --bg-nav: var(--charcoal);
+
+  /* Text */
+  --text-body: var(--cream);
+  --text-on-dark: var(--cream);
+  --text-muted: var(--silver);
+
+  /* Accents & Interactive */
   --accent-primary: var(--red);
-  
-  /* Override font families */
-  --font-heading: "Futura", sans-serif;
-  --font-body: "Inter", sans-serif;
-  --font-mono: "Space Mono", monospace;
-  
-  /* Accent colors for specific elements */
-  --h1-color: var(--red);
-  --h2-color: var(--ochre);
-  --h3-color: var(--teal);
+  --accent-border: var(--teal);
+  --interactive-hover: var(--ochre);
+
+  /* Fonts */
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Space Mono', 'Consolas', 'Menlo', monospace;
+
+  /* Custom variables for this theme */
+  --heading-h1-color: var(--red);
+  --heading-h2-color: var(--ochre);
+  --heading-h3-color: var(--teal);
+
+  /* Minimal helper variants to keep declarations readable */
+  --code-bg-alpha: rgba(26, 35, 50, 0.5);
+  --accent-border-weak: rgba(0, 159, 183, 0.25);
+  --accent-border-strong: rgba(0, 159, 183, 0.4);
+  --silver-weak: rgba(188, 188, 188, 0.2);
+  --silver-strong: rgba(188, 188, 188, 0.35);
+  --shadow-strong: 0 2px 12px rgba(0, 0, 0, 0.35);
+  --shadow-deep: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-accent: 0 6px 16px rgba(0, 159, 183, 0.3);
+  /* Deliberately distinct gradient stops for visible contrast */
+  --body-grad-start: var(--navy);
+  --body-grad-mid: var(--charcoal);
+  --body-grad-end: #111722;
+  --card-grad-start: #223246;
+  --card-grad-end: #111722;
+}
+
+/*****************************************************
+LAYOUT & BACKDROP
+*****************************************************/
+body {
+  background: linear-gradient(160deg, var(--body-grad-start) 0%, var(--body-grad-mid) 60%, var(--body-grad-end) 100%);
+  background-size: 100% 300%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--text-body);
+}
+
+.navbar {
+  background-color: var(--bg-nav) !important;
+  border-bottom: 1px solid var(--accent-border-weak);
+  box-shadow: var(--shadow-strong);
+}
+
+.dropdown-menu {
+  background-color: var(--bg-card);
+  border: 1px solid var(--accent-border-strong);
+  box-shadow: var(--shadow-deep);
+}
+
+.dropdown-item {
+  color: var(--text-body);
 }
 
 
 /*****************************************************
-BASE ELEMENTS - Override typography.css
+TYPOGRAPHY - Visual changes beyond color swaps
 *****************************************************/
 
-html, body {
-  /* Visual */
-  background: var(--bg-primary);
-  color: var(--text-primary);
-}
-
-h1, h2, h3, h4 {
-  /* Typography */
+h1,
+h2 {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.05rem;
 }
 
+h3,
+h4 {
+  font-weight: 700;
+}
+
 h1 {
-  /* Typography */
-  color: var(--h1-color);
+  font-size: 2.4rem;
+  color: var(--heading-h1-color);
 }
 
 h2 {
-  /* Typography */
-  color: var(--h2-color);
+  font-size: 1.7rem;
+  color: var(--heading-h2-color);
 }
 
 h3 {
-  /* Typography */
-  color: var(--h3-color);
+  font-size: 1.3rem;
+  color: var(--heading-h3-color);
+}
+
+h4 {
+  font-size: 1.2rem;
 }
 
 p {
-  /* Typography */
-  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6em;
 }
 
 
 /*****************************************************
-LINKS - Override base.css link styles
-*****************************************************/
-
-a {
-  /* Positioning */
-  position: relative;
-  
-  /* Typography */
-  color: var(--accent-primary);
-  font-weight: 600;
-}
-
-a::after {
-  /* Positioning */
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  
-  /* Box Model */
-  width: 100%;
-  height: 1px;
-  
-  /* Visual */
-  background: var(--accent-primary);
-  transform: scaleX(0);
-  transform-origin: left;
-  
-  /* Interactivity */
-  transition: transform 0.1s ease;
-}
-
-a:hover::after {
-  /* Visual */
-  transform: scaleX(1);
-}
-
-
-/*****************************************************
-CODE BLOCKS - Override typography.css
+CODE BLOCKS
 *****************************************************/
 
 .highlight {
-  /* Typography */
-  font-family: var(--font-mono);
-  font-size: .9em;
-  color: #333;
-  
-  /* Visual */
-  background: #7ec4ea;
-  border-radius: var(--radius-md);
+  color: var(--code-text-light);
+  box-shadow: inset 3px 0 0 var(--accent-border);
+}
+
+.highlight pre {
+  color: var(--code-text-light);
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+code {
+  color: var(--accent-border);
+  background: var(--code-bg-alpha);
+}
+
+.highlight code {
+  color: var(--code-text-light);
 }
 
 
 /*****************************************************
-NAVIGATION - Override nav.css
+NAVIGATION - Custom underline style
 *****************************************************/
 
-nav,
-.navbar {
-  /* Visual */
-  background: var(--bg-secondary);
+.nav-link {
+  font-family: var(--font-mono) !important;
+  border-bottom: 2px solid transparent !important;
+  border-radius: 0 !important;
+  transition: border-color var(--transition-fast);
 }
 
-nav a,
-.navbar-nav a {
-  /* Typography */
-  font-family: var(--font-mono);
-  color: var(--text-primary);
+.navbar-nav .nav-link::after {
+  display: none !important;
 }
 
-nav a:hover,
-.navbar-nav a:hover {
-  /* Typography */
-  color: var(--accent-primary);
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.show {
+  border-bottom-color: var(--accent-primary) !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: var(--accent-border-weak) !important;
+  border-left-color: var(--accent-border) !important;
 }
 
 
 /*****************************************************
-CARDS - Override cards.css
+CARDS - Gradient background
 *****************************************************/
 
 .card {
-  /* Typography */
-  color: var(--charcoal);
-  
-  /* Visual */
-  background: var(--cream);
-  border-radius: var(--radius-lg);
-  
-  /* Interactivity */
-  transition: transform 0.2s ease;
+  background: linear-gradient(135deg, var(--card-grad-start) 0%, var(--card-grad-end) 100%);
+  border: 1px solid var(--accent-border-strong);
+  opacity: 1;
 }
 
 .card:hover {
-  /* Visual */
-  transform: translateY(-4px);
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-accent);
+  opacity: 1;
+}
+
+.card h3 {
+  color: var(--accent-border);
+}
+
+.card a h3 {
+  color: var(--accent-border);
+}
+
+.card-text {
+  color: var(--text-muted);
 }
 
 
 /*****************************************************
-TOC ROWS - Override cards.css .toc-row
+TOC ROWS
 *****************************************************/
 
 .toc-row {
-  /* Visual */
-  background-color: var(--bg-secondary);
-  border-left: 3px solid var(--accent-primary);
-  
-  /* Interactivity */
-  transition: all 0.3s ease;
+  background: linear-gradient(135deg, var(--card-grad-start) 0%, var(--card-grad-end) 100%);
+  border: 1px solid var(--accent-border-strong);
 }
 
 .toc-row:hover {
-  /* Visual */
-  background-color: var(--charcoal);
-  border-left-color: var(--teal);
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-accent);
   transform: translateX(8px);
 }
 
 .toc-row h3 {
-  /* Typography */
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  color: var(--cream);
-}
-
-.toc-arrow {
-  /* Interactivity */
-  transition: opacity 0.3s ease;
+  color: var(--heading-h2-color);
 }
 
 
 /*****************************************************
-BUTTONS - Override base.css if present
+BUTTONS
 *****************************************************/
 
 button,
 .btn {
-  /* Box Model */
-  padding: 0.75em 1.5em;
-  
-  /* Typography */
   font-family: var(--font-mono);
-  font-size: 1rem;
-  color: var(--cream);
-  
-  /* Visual */
-  background: var(--accent-primary);
-  border: none;
-  border-radius: var(--radius-sm);
-  
-  /* Interactivity */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  color: var(--text-body);
 }
 
-button:hover,
-.btn:hover {
-  /* Visual */
-  background: var(--ochre);
+.btn-primary {
+  color: var(--text-body) !important;
+  background: var(--accent-primary);
+}
+
+.btn-primary:hover {
+  color: var(--text-body) !important;
+  background: var(--interactive-hover);
+}
+
+.btn-secondary {
+  color: var(--text-body) !important;
+  background: transparent;
+  border: 1px solid var(--accent-border-strong);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-border);
+  color: var(--interactive-hover) !important;
 }
 
 
 /*****************************************************
-FOOTER - Override base.css
+FORMS
+*****************************************************/
+
+input,
+textarea,
+select {
+  background: var(--bg-card);
+  color: var(--text-body);
+  border: 1px solid var(--silver-strong);
+  box-shadow: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent-border);
+  box-shadow: 0 0 0 3px var(--accent-border-weak);
+}
+
+
+/*****************************************************
+PULLQUOTES & ASIDES
+*****************************************************/
+
+.pullquote,
+aside {
+  color: var(--interactive-hover);
+  background: rgba(252, 191, 0, 0.05);
+  border-left: 4px solid var(--interactive-hover);
+  border-top: none;
+  border-bottom: none;
+  padding: var(--spacing-sm);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  margin-left: var(--spacing-lg);
+  margin-right: var(--spacing-lg);
+}
+
+.pullquote p,
+aside p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 991.98px) {
+  .pullquote,
+  aside {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.pullquote p,
+aside p {
+  color: var(--interactive-hover);
+}
+
+.pullquote::before,
+aside::before {
+  color: var(--interactive-hover);
+}
+
+
+/*****************************************************
+BLOCKQUOTE
+*****************************************************/
+
+blockquote {
+  color: var(--text-muted);
+  border-left: 4px solid var(--accent-border);
+}
+
+
+/*****************************************************
+ALERTS
+*****************************************************/
+
+.alert-info {
+  background-color: rgba(0, 159, 183, 0.15);
+  border-color: var(--accent-border);
+  color: #9dd4de;
+}
+
+.alert-info .alert-link {
+  color: var(--accent-border);
+}
+
+.alert-warning {
+  background-color: rgba(252, 191, 0, 0.15);
+  border-color: var(--interactive-hover);
+  color: #fdd876;
+}
+
+.alert-success {
+  background-color: rgba(40, 167, 69, 0.15);
+  border-color: var(--success);
+  color: #7dce98;
+}
+
+.alert-danger {
+  background-color: rgba(214, 40, 40, 0.15);
+  border-color: var(--accent-primary);
+  color: #f28a8a;
+}
+
+
+/*****************************************************
+SCROLLSTORY BOXES
+*****************************************************/
+
+.bg-text-box,
+.sticky-bg-content,
+.story-text {
+  background: rgba(14, 26, 43, 0.92);
+  color: var(--text-body);
+  border: 1px solid var(--accent-border-strong);
+  box-shadow: var(--shadow-deep);
+}
+
+.bg-text-box p,
+.sticky-bg-content p,
+.story-text p {
+  color: var(--text-body);
+}
+
+
+/*****************************************************
+TABLES
+*****************************************************/
+
+table {
+  background: var(--bg-card);
+  color: var(--text-body);
+  border-collapse: collapse;
+  border: 1px solid var(--silver-weak);
+}
+
+th,
+td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--silver-weak);
+}
+
+th {
+  background: var(--bg-nav);
+  color: var(--text-on-dark);
+}
+
+tr:nth-child(even) {
+  background: var(--bg-card);
+}
+
+
+/*****************************************************
+FOOTER
 *****************************************************/
 
 footer {
-  /* Box Model */
-  padding: 2em;
-  
-  /* Typography */
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  text-align: center;
-  
-  /* Visual */
-  background: var(--charcoal);
+  background-color: var(--bg-card);
+  border-top: 2px solid var(--accent-border);
+}
+
+
+/*****************************************************
+DIVIDERS
+*****************************************************/
+
+hr {
+  border-color: var(--silver-strong);
+}
+
+
+/*****************************************************
+LINKS
+*****************************************************/
+
+a {
+  color: var(--accent-border);
+  border-bottom: 1px dotted var(--accent-border);
+}
+
+a:visited {
+  color: var(--accent-border);
+  border-bottom: 1px dotted var(--accent-border);
+}
+
+a:hover {
+  color: var(--interactive-hover);
+  border-bottom-color: var(--interactive-hover);
+}
+
+a:focus-visible,
+.nav-link:focus-visible,
+.btn:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent-border);
+  outline-offset: 2px;
 }

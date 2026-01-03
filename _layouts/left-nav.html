@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
 
-{% include page-header.html %}
+{% include html/html-head.html %}
 
 <body>
 
   <div class="left-bar">
-    {% include nav-left.html %}
+    {% include nav/nav-left.html %}
   </div>
 
   <div class="main-content">
 
-    {% include nav-top.html %}
+    {% include nav/nav-top.html %}
 
     <div class="container">
       {{ content }}
@@ -19,7 +19,7 @@
     
   </div> <!-- main-content -->
 
-  {% include page-js.html %}
+  {% include html/html-js.html %}
 
 </body>
 </html>

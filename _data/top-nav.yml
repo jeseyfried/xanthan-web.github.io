@@ -2,36 +2,42 @@
 - title: "Getting Started"
   items:
     - title: "Creating your site"
-      url: "/guides/getting-started"
+      url: "/getting-started/"
     - title: "Understanding Folders"
-      url: "/guides/understanding-folders"
+      url: "/getting-started/understanding-folders"
     - title: "Understanding Pages"
-      url: "/guides/understanding-pages"
+      url: "/getting-started/understanding-pages"
     - title: "Editing in GitHub"
-      url: "/guides/github-editing"
+      url: "/getting-started/editing-in-github"
     - title: "Adding Images in GitHub"
-      url: "/guides/github-images"
+      url: "/getting-started/adding-images-in-github"
+    - divider: true
+    - title: "Editing Locally"
+      url: "/getting-started/editing-locally"
+    - title: "Previewing Locally"
+      url: "/getting-started/previewing-locally"
 
-- title: "Editing your site"
+
+- title: "Content & Design"
   items:
-    - title: "Working Locally"
-      url: "/guides/working-locally"
-    
+    - title: "Overview"
+      url: "/content-design/"
     - divider: true
-    
     - title: "Typography"
-      url: "/components/typography"
+      url: "/content-design/typography"
     - title: "Images"
-      url: "/components/images"
-    - title: "Headers"
-      url: "/components/headers"
-    - title: "Customizing Colors"
-      url: "/guides/customizing-colors"
+      url: "/content-design/images"
+    - title: "Media"
+      url: "/content-design/media"
+    - title: "Image Headers"
+      url: "/content-design/image-headers"
+    - title: "Colors, Fonts, Themes"
+      url: "/content-design/colors-fonts-themes"
     - divider: true
-    - title: "Using Themes"
-      url: "/guides/using-themes"    
+    - title: "Using AI Assistance"
+      url: "/content-design/using-ai-assistance"
     - title: "Troubleshooting"
-      url: "/guides/troubleshooting"
+      url: "/content-design/troubleshooting"
 
 - title: "Navigation"
   items:
@@ -45,26 +51,26 @@
     - title: "Left Navbar Demo"
       url: "/navigation/left-nav-demo"
     - title: "Map"
-      url: "/map"
-      
+      url: "/navigation/map"
+
 
 - title: "ScrollStories"
   items:
     - title: "Overview"
-      url: "/scrollstories"    
+      url: "/scrollstories"
     - title: "Backgrounds with scrolly boxes"
-      url: "/components/bg-scrollbox"
+      url: "/scrollstories/bg-scrollbox"
     - title: "Background switching with scrolly boxes"
-      url: "/components/bg-switch"
+      url: "/scrollstories/bg-switch"
     - title: "Side scrolling text"
-      url: "/components/side-scroll"
+      url: "/scrollstories/side-scroll"
     - divider: true
     - title: "Seedling Essay"
-      url: "/scrollstories/seedling"
+      url: "/scrollstories/examples/seedling"
     - title: "Sapling Essay"
-      url: "/scrollstories/sapling"
+      url: "/scrollstories/examples/sapling"
     - title: "Forest Essay"
-      url: "/scrollstories/forest"
+      url: "/scrollstories/examples/forest"
 
       
 

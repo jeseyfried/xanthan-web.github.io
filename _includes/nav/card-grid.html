@@ -1,0 +1,18 @@
+{% assign cards = include.cards %}
+
+<div class="card-grid">
+  {% for card in cards %}
+  {% if card.title and card.summary %}
+    <div class="card v-card">
+      {% assign card_href = card.link | default: card.url %}
+      <a href="{{site.baseurl}}{{ card_href }}">
+        <img src="{{site.baseurl}}{{ card.dir }}{{ card.thumbnail }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title">{{ card.title }}</h3>
+          <p class="card-text">{{ card.summary }}</p>
+        </div>
+      </a>
+    </div>
+  {% endif %}
+  {% endfor %}
+</div>

@@ -1,133 +1,224 @@
 ---
-title: Xanthan - Static Website Template
+title: Xanthan enables public digital humanities work
 layout: base
-date: 2024-12-02
+date: 2026-01-01
+summary: A platform for digitally-engaged scholarship, teaching digital literacy, and sustainable public humanities.
+template_cards:
+  - title: "Personal Portfolio"
+    summary: "Showcase your research, teaching, and creative work. Professional sites for getting your ideas noticed. Comes with example pages (like about, cv, etc) that you can quickly edit."
+    thumbnail: "/assets/images/portfolio-screenshot.png"
+    link: "https://xanthan-web.github.io/portfolio-template/"
+  - title: "Class Project"
+    summary: "Collaborative archives gathering student work around a common theme. Build collectively, learn together. Comes with a basic card directory, map page, and sample essays to illustrate how to keep everything organized"
+    thumbnail: "/assets/images/class-project-screenshot.png"
+    link: "https://amaranth.unm.edu/campus-history/"
+  - title: "ScrollStory"
+    summary: Kinda like StoryMaps with immersive scrolling, background images, and design flexibility, but this one is non-proprietary and fundamentally collaborative.
+    thumbnail: "/assets/images/forest-scroll.gif"
+    link: "scrollstories/examples/forest"
 ---
 
-# Share your work!
-Xanthan is a free, open-source website template designed for students and faculty at all technical skill levels. Create professional portfolios, class projects, and digital narratives—no costs, no ads, no coding.
+{: .hero-section}
+# Reach Beyond the Academy
 
+{: .hero-tagline}
+Build open, sustainable, and collaborative humanities projects. Foreground humanities with technology. Showcase your work. Build digital fluency.
+
+{: .hero-cta}
+[Get Started →](getting-started/){: .btn-primary}
+
+---
+
+## What is Xanthan?
+
+Xanthan is a collection of ready-to-use website templates and extensive documentation designed for historians, educators, and researchers who want to publish their work online. No installation, no coding required—just choose a template, customize it with your content, and deploy a professional site in minutes. Built on simple, durable web technologies that will last decades.
+
+{::nomarkdown}
+</div> <!-- close main container -->
+
+<div class="section-alt">
+  <div class="container">
+{:/nomarkdown}
+
+
+
+## Who is it for?
+
+**Scholars seeking public engagement.** Move your work beyond paywalls and PDFs. Build digital projects that reach broader audiences—interactive arguments, multimedia essays, research portfolios that demonstrate impact beyond traditional publications.
+
+**Instructors teaching digital literacy.** Turn collaborative class projects into real public scholarship. Students build collectively around shared themes—local history archives, community documentation, thematic collections—learning web fundamentals while creating work that matters beyond the semester.
+
+**Students building professional presence.** Create portfolios that showcase your research, teaching, and digital skills. Own your academic identity with a site you control, not scattered across platforms that come and go.
+
+{::nomarkdown}
+  </div>
+</div>
+{:/nomarkdown}
+
+{::nomarkdown}
+<div class="container"> <!-- reopen main container -->
+{:/nomarkdown}
+
+
+## What Can You Build?
+
+Here are a few examples of what people create with Xanthan:
+
+{% include nav/card-stack.html cards=page.template_cards %}
+
+Ready to start? Pick a template in the [Getting Started guide](getting-started/) and you'll have a live site in 10 minutes.
+
+
+{::nomarkdown}
+</div> <!-- close main container -->
+
+<div class="section-alt">
+  <div class="container">
+{:/nomarkdown}
 
 ## Why Xanthan?
-Unlike commercial platforms (Wix, Squarespace), Xanthan emphasizes **sustainability** and **ownership**. No subscriptions, no vendor lock-in, no ads.
 
-**Perfect for:**
-- Students learning web development
-- Academics building professional portfolios
-- Digital humanities projects
-- Collaborative class websites
-- Long-term digital scholarship
+Digital public humanities work should be public in its process as its product. Xanthan counters the trend of enclosing scholarship within proprietary platforms and walled gardens. We embrace **minimal computing**: static sites built on durable web standards (HTML, CSS, Markdown) that cost almost nothing to host, require minimal maintenance, and are designed to last decades, not just grant cycles.
 
-[Get Started in 10 Minutes →](guides/getting-started)
+{::nomarkdown}
+<div class="section-accent">
+{:/nomarkdown}
+
+##### You control your content
+Your site is text files in a repository you control—not locked in a proprietary platform. Move it to any web host. Take your site with you after graduation, between institutions, or to your own domain. It's yours.
+
+##### Built to last
+HTML, CSS, and Markdown are fundamental web technologies that will outlive any proprietary platform. What you build today will still work in 2050, with literally zero maintenance. Static sites have no databases to secure, no software to update, no security patches to apply. They just work.
+
+##### It's free. Forever
+GitHub Pages hosting costs $0/month. No "freemium" upsells or surprise bills when traffic increases. No pay, no site.
+
+##### You learn digital fluency
+Markdown, Git, HTML, CSS—skills that work across any digital project, not just one platform. These capabilities form the foundation of digitally-engaged humanities work.
+
+##### Open for collaboration
+GitHub's tools are free and industry-standard. Students and colleagues can see how your site works, learn from your solutions, and build on your code. No expensive team plans for multi-user projects.
+
+{::nomarkdown}
+</div>
+{:/nomarkdown}
+
+{: .link-callout}
+[See more details in our FAQs →](faqs#why-not-use-wix-or-squarespace)
+
+{::nomarkdown}
+  </div> <!-- close container -->
+</div> <!-- close section-alt -->
+
+<div class="container"> <!-- reopen main container -->
+{:/nomarkdown}
+
+
+{% include images/jumbotron-gradient.html
+  image-path="/assets/images/scaffolding-hand.png"
+  fade-start="50%"
+  fade-end="100%"
+  title=""
+  text="
+
+## Scaffolded for AI Assistance
+
+Most humanists have faced a significant barrier to engaging with technology, because it takes a lot of time for an unclear payoff. Without a tech background, sometimes the learning curve is either too steep or too long (or both). **AI tools make it possible to experiment and learn with web technologies like never before.** 
+
+While digital humanists have debated the most versatile coding language to use, now it's clear: plain English. You just need an idea of how things should go together and that's what Xanthan provides. **You don't need a drag-and-drop admin interface anymore!** They are only going to slow you down and limit what you can do.
+
+**Xanthan provides the scaffolding that makes AI collaboration productive and trustworthy.** Our clean, well-documented templates give AI (and you) a known framework to work within.
+"
+%}
+
+{: .two-columns}
+- "I created a new page but it's not showing up on my top nav bar." _(AI can update your top-nav file to list your new page and explain how it works)_
+
+- "I'm trying to make the font on the this page larger but it's not changing" _(AI will evalaute if you have properly loaded the font and referenced it in your code)_
+
+- "I changed my font but now the lines are too close together. Help me increase the line spacing so it's not so cramped." _(AI will show you where in your CSS file to make a change)_
+
+- "I made a bunch of changes on my homepage and now my site isn't updating at all. Can you find the syntax error or tell me how to find it?" _(AI will show you where your error is and tell you how to get more details on the error for nex time.)_
+
+- "I really want to have a section on my page with a color background two columns of text. Create a new component that does that and explain how i can use it."
+
+- "My image carousel is not loading my images. Can you double check the code and if files are in the right place?" 
+
+{: .link-callout}
+[See our AI assistance guide →](content-design/using-ai-assistance)
 
 ---
 
-## Key Features
+## What You Learn (And Why It Matters)
 
-### Rich Content Components
-Create visually compelling digital narratives with built-in components:
+Xanthan isn't just about creating a website. Process matters as much as product. By working with Xanthan, you build digital fluency that can engage broad audiences:
 
-- **Image Galleries** - Carousels, lightboxes, before/after sliders
-- **ScrollyTelling** - Narrative scrolling with background images
-- **Card Layouts** - Project grids, team directories, portfolios
-- **Interactive Maps** - StoryMap-style geographic narratives
-- **Code Samples** - Syntax-highlighted examples for teaching
-- **Footnotes** - Academic-style inline citations
+{::nomarkdown}
+<div class="section-accent">
+{:/nomarkdown}
 
-[See Component Examples →](components/images)
+##### Design thinking for humanities storytelling
+How to keep readers curious and scrolling through your argument
 
 
-### Designed for Learning
-Xanthan teaches fundamental web technologies while you build:
-
-- **Markdown** for writing content
-- **CSS** for styling and design
-- **HTML includes** for reusable components
-- **Git** for version control
-- **Jekyll** for static site generation
-
-Every component includes **copy-paste code examples** and explanations. Learn by doing, not memorizing.
-
-[Browse Learning Guides →](guides/)
+##### Open infrastructure for collaborative work
+Tools and workflows used by museums, archives, and cultural heritage projects
 
 
----
+##### Working productively with AI
+Prompting, evaluating suggestions, iterating on digital projects
 
 
-## Built for Sustainability
-Digital projects shouldn't disappear when funding ends or platforms change. Xanthan creates **durable digital scholarship**:
-
-- ✓ **Free hosting** via GitHub Pages (no ongoing costs)
-- ✓ **Open source** - no proprietary lock-in
-- ✓ **Standard technologies** - HTML/CSS/Markdown will work for decades
-- ✓ **Version control** - Every change tracked, nothing lost
-- ✓ **Portable** - Move your site anywhere, anytime
-
-Your content, your control, built to last.
-
----
+##### Assembling components into coherent projects
+Understanding how digital projects fit together
 
 
-## What Makes Xanthan Different?
+##### Web fundamentals
+How content is structured (Markdown, HTML) and styled (CSS)
 
-**Not a website builder** → We teach you to build websites
-**Not a CMS** → Simple files in folders, no database
-**Not a blogging platform** → Designed for digital scholarship
+{::nomarkdown}
+</div>
+{:/nomarkdown}
 
-Xanthan invites you to look under the hood. You'll understand how your site works, giving you the skills to create, maintain, and evolve your digital presence over time.
 
----
-
-### Easy Customization
-Change your site's look without touching complex code:
-
-- **CSS Variables** - Update colors site-wide from one file
-- **Flexible Layouts** - Multiple templates for different page types
-- **Navigation Options** - Top nav, sidebars, card grids
-- **Typography System** - Professional font pairings built-in
-
-No design experience needed—start with our defaults and customize as you learn.
-
-[Learn About Customization →](documentation)
+These aren't "website skills." They're how humanities projects need to be visible in a digital world. Whether you're building a research project, teaching a course, assembling a digital exhibit, or creating a professional portfolio, these capabilities form the foundation of digitally-engaged work.
 
 
 
-## Why "Xanthan"?
-
-{% include figure.html
-  class="right"
-  width="33%"
-  caption="Xanthan chemical structure"
-  image-path="/assets/images/Xanthan.svg"
-  source-url="https://commons.wikimedia.org/wiki/File:Xanthan.svg"
+{% include typography/alert.html
+  title="Learning by Breaking and Fixing"
+  text="Xanthan is designed to be experimented with. Try layouts. Test color schemes. Break the CSS. Git version control means you can always restore what worked. The risk of experimentation is low; the learning is real."
+  class="info"
 %}
 
 
-Xanthan gum is a polysaccharide used as a binder and emulsifier---it transforms different ingredients into something greater than the sum of their parts. It brings things to together and keeps them stable. 
 
-Similarly, this template binds simple technologies (HTML, CSS, Markdown) into a stable framework for digital scholarship. Plus, it's fun to say. And it's already in everything!
+{::nomarkdown}
+<div class="section-warm">
+  <div class="container">
+{:/nomarkdown}
 
-<div style="clear:both"></div>
+<h2 style="color: var(--amber);">Yes, it's like the gum.</h2>
+Xanthan gum is a polysaccharide used as a binder and emulsifier—it transforms disparate ingredients into something greater than the sum of their parts. **It brings things together and keeps them stable.**
 
----
+Similarly, this platform binds simple, durable web technologies into a stable framework for digital scholarship. It lets you mix text, media, code, and argument into a cohesive whole with a long shelf life. Good infrastructure should be reliable, maintainable, and built to last.
 
-## Ready to Start?
+Read more about [our philosophy of openness](about).
 
-<div style="text-align: center; margin: 2em 0;">
-  <a href="guides/getting-started" style="display: inline-block; padding: 1em 2em; background: var(--clay); color: white; text-decoration: none; border-radius: 8px; font-size: 1.2em; border: none;">Get Started Now →</a>
+{::nomarkdown}
+  </div>
 </div>
+{:/nomarkdown}
 
-Or explore:
-- [Component Examples](components/images) - See what's possible
-- [Documentation](documentation) - Complete overview
-- [ScrollStories](scrollstories) - Digital narrative examples
-- [FAQ](faqs) - Common questions
 
----
-
-### Join the Community
-Xanthan is developed for teaching digital literacy in humanities courses. It's free, open-source, and built for learners.
-
-- **Questions?** Check the [Troubleshooting Guide](guides/troubleshooting)
-- **Found a bug?** [Report it on GitHub](https://github.com/yourusername/xanthan/issues)
-- **Built something cool?** Share it with us!
+<div style="display: flex; align-items: center; gap: var(--spacing-xl); margin: 3em 0;">
+  <div style="flex: 1;">
+    <h3>Ready to build and learn?</h3>
+    <p style="color: var(--text-muted);">
+      Start with the Getting Started guide. Deploy a template in 10 minutes. Customize it with copy-paste examples. Get unstuck with AI when you need help. Build digital literacy while creating real scholarship.
+    </p>
+  </div>
+  <div style="flex: 0 0 auto;">
+    <a href="getting-started/" class="btn-primary">Let's Go! →</a>
+  </div>
+</div>

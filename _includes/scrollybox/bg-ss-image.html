@@ -1,5 +1,5 @@
 {% capture image-path %}
-{% include image-path.html image-path=include.image-path %}
+{% include images/image-path.html image-path=include.image-path %}
 {% endcapture %}
 
 {% assign image-path = image-path | strip %}
@@ -7,7 +7,7 @@
 </div>
 
 <div class="ss-image-container" id="{{ include.ss-id }}">
-<img class="ss-image" src="{{image-path}}"/>
+<img class="ss-image" src="{{image-path}}" alt="{{ include.alt-text | default: '' }}"/>
 </div>
 
 <div id="{{ include.ss-id }}-textbox" class="ss-text-box" markdown="1"> 

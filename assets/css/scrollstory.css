@@ -1,21 +1,33 @@
 /* Scrollstory specific styles - fonts imported in base.css */
-.scrollstory-container {
+/* Override container styling for scrollstory pages */
+.container {
   /* Box Model */
-  max-width: 55rem;
-  padding: 0;
+  max-width: 45rem;
+  padding: 0 var(--spacing-md);
   margin: auto;
-  
+
   /* Typography */
   font-family: 'Lora', serif;
   font-size: 1rem;
   line-height: 1.4em;
 }
 
-.scrollstory-container h1,
-.scrollstory-container h2,
-.scrollstory-container h3,
-.scrollstory-container h4,
-.scrollstory-container h5 {
+.container p {
+  /* Typography */
+  line-height: 1.6em;
+}
+
+/* Text boxes within background images */
+.bg-text-box {
+  /* Typography */
+  font-family: 'Lora', serif;
+}
+
+.container h1,
+.container h2,
+.container h3,
+.container h4,
+.container h5 {
   /* Typography */
   font-family: 'Source Sans 3', sans-serif;
   font-weight: normal;

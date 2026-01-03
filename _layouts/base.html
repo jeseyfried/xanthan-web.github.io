@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {% include page-header.html %}
+  {% include html/html-head.html %}
 
   <body>
     
     <div class="page-wrap">
       
-    {% include nav-top.html %}
+    {% include nav/nav-top.html %}
 
     {% assign headerimage = page.header-image %}
     {% assign headertitle = page.header-title %}
@@ -16,7 +16,7 @@
     
     {% if headerimage %}
     
-      {% include page-header-image.html
+      {% include layout/header-image.html
         image-path = headerimage
         title = headertitle
         height = headerheight                
@@ -31,13 +31,13 @@
       {{ content }}
     </div> <!-- /container -->
 
-    {% include page-footer.html %}
+    {% include layout/footer.html %}
 
     </div> <!-- /page-wrap -->
 
     {% if jekyll.environment == 'production' and site.analytics_id %}{% include google_analytics.html %}{% endif %}
 
-    {% include page-js.html %}
+    {% include html/html-js.html %}
 
   </body>
 </html>
