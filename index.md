@@ -25,7 +25,7 @@ template_cards:
 Build open, sustainable, and collaborative humanities projects. Foreground humanities with technology. Showcase your work. Build digital fluency.
 
 {: .hero-cta}
-[Get Started →](getting-started/){: .btn-primary}
+[Get Started →](docs/getting-started/){: .btn-primary}
 
 ---
 
@@ -66,7 +66,7 @@ Here are a few examples of what people create with Xanthan:
 
 {% include nav/card-stack.html cards=page.template_cards %}
 
-Ready to start? Pick a template in the [Getting Started guide](getting-started/) and you'll have a live site in 10 minutes.
+Ready to start? Pick a template in the [Getting Started guide](docs/getting-started/) and you'll have a live site in 10 minutes.
 
 
 {::nomarkdown}
@@ -145,7 +145,7 @@ While digital humanists have debated the most versatile coding language to use, 
 - "My image carousel is not loading my images. Can you double check the code and if files are in the right place?" 
 
 {: .link-callout}
-[See our AI assistance guide →](content-design/using-ai-assistance)
+[See our AI assistance guide →](docs/content-design/using-ai-assistance)
 
 ---
 
@@ -219,6 +219,6 @@ Read more about [our philosophy of openness](about).
     </p>
   </div>
   <div style="flex: 0 0 auto;">
-    <a href="getting-started/" class="btn-primary">Let's Go! →</a>
+    <a href="docs/getting-started/" class="btn-primary">Let's Go! →</a>
   </div>
 </div>

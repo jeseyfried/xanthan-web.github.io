@@ -114,7 +114,7 @@ Duis eros odio, fringilla et pulvinar vitae, eleifend quis elit. Sed eleifend le
 
 ## Ready to Create Your Own?
 
-**New to Xanthan?** Start with the [Getting Started guide](../../../getting-started/) to create your own site first. Once you have a working site, come back here to build your ScrollStory.
+**New to Xanthan?** Start with the [Getting Started guide](../../../docs/getting-started/) to create your own site first. Once you have a working site, come back here to build your ScrollStory.
 
 **Already have a site based on a Xanthan template?** To make your own Seedling essay:
 

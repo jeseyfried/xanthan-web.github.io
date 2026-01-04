@@ -131,7 +131,7 @@ Many people wonder if they need a personal website in an age of social media, ac
 
 **Learn valuable skills.** Building and maintaining your own site teaches you how the web actually works—skills that are increasingly valuable in any field.
 
-Ready to build? Check out the [Getting Started guide](getting-started/).
+Ready to build? Check out the [Getting Started guide](docs/getting-started/).
 
 ---
 
