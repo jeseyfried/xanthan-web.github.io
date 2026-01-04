@@ -52,15 +52,19 @@ jobs:
           echo "Syncing to portfolio-template"
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-          # Sync complete code libraries
+          # Sync complete code libraries (excludes template-specific images)
           rsync -av --delete xanthan-source/_includes/ portfolio-template/_includes/
           rsync -av --delete xanthan-source/_layouts/ portfolio-template/_layouts/
           rsync -av --delete xanthan-source/assets/css/ portfolio-template/assets/css/
           rsync -av --delete xanthan-source/assets/js/ portfolio-template/assets/js/
 
+          # Sync shared background images but preserve template-specific images
+          rsync -av --delete xanthan-source/assets/images/backgrounds/ portfolio-template/assets/images/backgrounds/ 2>/dev/null || true
+
           # Sync dependency files
           cp xanthan-source/Gemfile portfolio-template/Gemfile
           cp xanthan-source/.gitignore portfolio-template/.gitignore
+          cp xanthan-source/CHANGELOG.md portfolio-template/XANTHAN_CHANGELOG.md
 
           # DO NOT sync _config.yml or _data/ - they are template-specific
 
@@ -128,15 +132,19 @@ jobs:
           echo "Syncing to scrollstory-template"
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-          # Sync complete code libraries
+          # Sync complete code libraries (excludes template-specific images)
           rsync -av --delete xanthan-source/_includes/ scrollstory-template/_includes/
           rsync -av --delete xanthan-source/_layouts/ scrollstory-template/_layouts/
           rsync -av --delete xanthan-source/assets/css/ scrollstory-template/assets/css/
           rsync -av --delete xanthan-source/assets/js/ scrollstory-template/assets/js/
 
+          # Sync shared background images but preserve template-specific images
+          rsync -av --delete xanthan-source/assets/images/backgrounds/ scrollstory-template/assets/images/backgrounds/ 2>/dev/null || true
+
           # Sync dependency files
           cp xanthan-source/Gemfile scrollstory-template/Gemfile
           cp xanthan-source/.gitignore scrollstory-template/.gitignore
+          cp xanthan-source/CHANGELOG.md scrollstory-template/XANTHAN_CHANGELOG.md
 
           # DO NOT sync _config.yml or _data/ - they are template-specific
 
@@ -200,15 +208,19 @@ jobs:
           echo "Syncing to class-project-template"
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-          # Sync complete code libraries
+          # Sync complete code libraries (excludes template-specific images)
           rsync -av --delete xanthan-source/_includes/ class-project-template/_includes/
           rsync -av --delete xanthan-source/_layouts/ class-project-template/_layouts/
           rsync -av --delete xanthan-source/assets/css/ class-project-template/assets/css/
           rsync -av --delete xanthan-source/assets/js/ class-project-template/assets/js/
 
+          # Sync shared background images but preserve template-specific images
+          rsync -av --delete xanthan-source/assets/images/backgrounds/ class-project-template/assets/images/backgrounds/ 2>/dev/null || true
+
           # Sync dependency files
           cp xanthan-source/Gemfile class-project-template/Gemfile
           cp xanthan-source/.gitignore class-project-template/.gitignore
+          cp xanthan-source/CHANGELOG.md class-project-template/XANTHAN_CHANGELOG.md
 
           # DO NOT sync _config.yml or _data/ - they are template-specific
 
