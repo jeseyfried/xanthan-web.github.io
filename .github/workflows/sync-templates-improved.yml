@@ -55,7 +55,7 @@ jobs:
           # Sync complete code libraries (excludes template-specific images)
           rsync -av --delete xanthan-source/_includes/ portfolio-template/_includes/
           rsync -av --delete xanthan-source/_layouts/ portfolio-template/_layouts/
-          rsync -av --delete xanthan-source/assets/css/ portfolio-template/assets/css/
+          rsync -av --delete --exclude='sidebar.css' xanthan-source/assets/css/ portfolio-template/assets/css/
           rsync -av --delete xanthan-source/assets/js/ portfolio-template/assets/js/
           rsync -av --delete xanthan-source/scrollstories/ portfolio-template/scrollstories/
 
