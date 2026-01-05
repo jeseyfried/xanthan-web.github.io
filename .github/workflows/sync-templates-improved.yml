@@ -40,6 +40,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: xanthan-source
+          fetch-depth: 2
 
       - name: Checkout portfolio-template
         uses: actions/checkout@v4
@@ -99,8 +100,13 @@ jobs:
           # Actual commit and push
           git add -A
 
-          # Create detailed commit message
-          COMMIT_MSG="chore: sync core files from xanthan
+          # Get the original commit message from xanthan
+          cd ../xanthan-source
+          ORIGINAL_COMMIT_MSG=$(git log -1 --pretty=%B HEAD)
+          cd ../portfolio-template
+
+          # Create detailed commit message using original message
+          COMMIT_MSG="${ORIGINAL_COMMIT_MSG}
 
           Synced from xanthan commit: ${{ github.sha }}
 
@@ -122,6 +128,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: xanthan-source
+          fetch-depth: 2
 
       - name: Checkout scrollstory-template
         uses: actions/checkout@v4
@@ -178,7 +185,12 @@ jobs:
 
           git add -A
 
-          COMMIT_MSG="chore: sync core files from xanthan
+          # Get the original commit message from xanthan
+          cd ../xanthan-source
+          ORIGINAL_COMMIT_MSG=$(git log -1 --pretty=%B HEAD)
+          cd ../scrollstory-template
+
+          COMMIT_MSG="${ORIGINAL_COMMIT_MSG}
 
           Synced from xanthan commit: ${{ github.sha }}
 
@@ -200,6 +212,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: xanthan-source
+          fetch-depth: 2
 
       - name: Checkout class-project-template
         uses: actions/checkout@v4
@@ -256,7 +269,12 @@ jobs:
 
           git add -A
 
-          COMMIT_MSG="chore: sync core files from xanthan
+          # Get the original commit message from xanthan
+          cd ../xanthan-source
+          ORIGINAL_COMMIT_MSG=$(git log -1 --pretty=%B HEAD)
+          cd ../class-project-template
+
+          COMMIT_MSG="${ORIGINAL_COMMIT_MSG}
 
           Synced from xanthan commit: ${{ github.sha }}
 
