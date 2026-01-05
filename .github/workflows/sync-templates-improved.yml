@@ -100,22 +100,24 @@ jobs:
           # Actual commit and push
           git add -A
 
-          # Get the original commit message from xanthan
+          # Get the original commit message from xanthan and save to file
           cd ../xanthan-source
-          ORIGINAL_COMMIT_MSG=$(git log -1 --pretty=%B HEAD)
+          git log -1 --pretty=%B HEAD > /tmp/commit-msg.txt
           cd ../portfolio-template
 
           # Create detailed commit message using original message
-          COMMIT_MSG="${ORIGINAL_COMMIT_MSG}
+          {
+            cat /tmp/commit-msg.txt
+            echo ""
+            echo "Synced from xanthan commit: ${{ github.sha }}"
+            echo ""
+            echo "Changes:"
+            git diff --cached --stat
+            echo ""
+            echo "[skip ci]"
+          } > /tmp/final-commit-msg.txt
 
-          Synced from xanthan commit: ${{ github.sha }}
-
-          Changes:
-          $(git diff --cached --stat)
-
-          [skip ci]"
-
-          git commit -m "$COMMIT_MSG"
+          git commit -F /tmp/final-commit-msg.txt
           git push
 
           echo "✓ Changes pushed to portfolio-template"
@@ -185,21 +187,23 @@ jobs:
 
           git add -A
 
-          # Get the original commit message from xanthan
+          # Get the original commit message from xanthan and save to file
           cd ../xanthan-source
-          ORIGINAL_COMMIT_MSG=$(git log -1 --pretty=%B HEAD)
+          git log -1 --pretty=%B HEAD > /tmp/commit-msg.txt
           cd ../scrollstory-template
 
-          COMMIT_MSG="${ORIGINAL_COMMIT_MSG}
+          {
+            cat /tmp/commit-msg.txt
+            echo ""
+            echo "Synced from xanthan commit: ${{ github.sha }}"
+            echo ""
+            echo "Changes:"
+            git diff --cached --stat
+            echo ""
+            echo "[skip ci]"
+          } > /tmp/final-commit-msg.txt
 
-          Synced from xanthan commit: ${{ github.sha }}
-
-          Changes:
-          $(git diff --cached --stat)
-
-          [skip ci]"
-
-          git commit -m "$COMMIT_MSG"
+          git commit -F /tmp/final-commit-msg.txt
           git push
 
           echo "✓ Changes pushed to scrollstory-template"
@@ -269,21 +273,23 @@ jobs:
 
           git add -A
 
-          # Get the original commit message from xanthan
+          # Get the original commit message from xanthan and save to file
           cd ../xanthan-source
-          ORIGINAL_COMMIT_MSG=$(git log -1 --pretty=%B HEAD)
+          git log -1 --pretty=%B HEAD > /tmp/commit-msg.txt
           cd ../class-project-template
 
-          COMMIT_MSG="${ORIGINAL_COMMIT_MSG}
+          {
+            cat /tmp/commit-msg.txt
+            echo ""
+            echo "Synced from xanthan commit: ${{ github.sha }}"
+            echo ""
+            echo "Changes:"
+            git diff --cached --stat
+            echo ""
+            echo "[skip ci]"
+          } > /tmp/final-commit-msg.txt
 
-          Synced from xanthan commit: ${{ github.sha }}
-
-          Changes:
-          $(git diff --cached --stat)
-
-          [skip ci]"
-
-          git commit -m "$COMMIT_MSG"
+          git commit -F /tmp/final-commit-msg.txt
           git push
 
           echo "✓ Changes pushed to class-project-template"
