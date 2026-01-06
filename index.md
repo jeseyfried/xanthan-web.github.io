@@ -31,7 +31,7 @@ Build open, sustainable, and collaborative humanities projects. Foreground human
 
 ## What is Xanthan?
 
-Xanthan is a collection of ready-to-use website templates and extensive documentation designed for historians, educators, and researchers who want to publish their work online. No installation, no coding required—just choose a template, customize it with your content, and deploy a professional site in minutes. Built on simple, durable web technologies that will last decades.
+Xanthan is a collection of ready-to-use website templates and extensive documentation designed for reseachers,educators, and students who want to showcase their work online and communicate to a wider audience. No installation, no coding required—just choose a template (which is really a handful of text files that make a website), customize it with your content. Built on simple, durable web technologies that will last decades. 
 
 {::nomarkdown}
 </div> <!-- close main container -->
@@ -62,11 +62,11 @@ Xanthan is a collection of ready-to-use website templates and extensive document
 
 ## What Can You Build?
 
-Here are a few examples of what people create with Xanthan:
+Here are a few examples of what people have used Xanthan for:
 
 {% include nav/card-stack.html cards=page.template_cards %}
 
-Ready to start? Pick a template in the [Getting Started guide](docs/getting-started/) and you'll have a live site in 10 minutes.
+Ready to start? Pick a template in the [Getting Started guide](docs/getting-started/) and you'll have a live site in 10 minutes---ready to customize.
 
 
 {::nomarkdown}
@@ -90,14 +90,16 @@ Your site is text files in a repository you control—not locked in a proprietar
 ##### Built to last
 HTML, CSS, and Markdown are fundamental web technologies that will outlive any proprietary platform. What you build today will still work in 2050, with literally zero maintenance. Static sites have no databases to secure, no software to update, no security patches to apply. They just work.
 
-##### It's free. Forever
-GitHub Pages hosting costs $0/month. No "freemium" upsells or surprise bills when traffic increases. No pay, no site.
-
 ##### You learn digital fluency
-Markdown, Git, HTML, CSS—skills that work across any digital project, not just one platform. These capabilities form the foundation of digitally-engaged humanities work.
+Markdown, GitHub, HTML, CSS---foundational skills that are essential for any digital cultural heritage work and standard across institutions. These capabilities form the foundation of digitally-engaged humanities work.
+
+
+##### It's free.
+GitHub Pages hosting costs $0/month. No ads. No "freemium" upsells. No bills when traffic increases or you use it a lot.
+
 
 ##### Open for collaboration
-GitHub's tools are free and industry-standard. Students and colleagues can see how your site works, learn from your solutions, and build on your code. No expensive team plans for multi-user projects.
+GitHub is an industry-standard collaboration tool. Students and colleagues can see how your site works, learn from your solutions, and build on your code. No expensive team plans for multi-user projects.
 
 {::nomarkdown}
 </div>

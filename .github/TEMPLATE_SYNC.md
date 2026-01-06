@@ -22,30 +22,48 @@ The following directories and files sync automatically to all templates:
 
 - `_includes/` — All reusable components (figure.html, carousel.html, etc.)
 - `_layouts/` — All page templates (base.html, scrollstory.html, etc.)
-- `assets/` — CSS, JavaScript, and shared images
+- `assets/css/` — All stylesheets (except `sidebar.css` for portfolio-template)
+- `assets/js/` — All JavaScript files
+- `assets/images/backgrounds/` — Shared background images (preserves template-specific images)
+- `docs/` — Complete documentation (except `docs/index.md` which stays template-specific)
+- `scrollstories/` — ScrollStory documentation and examples
 - `Gemfile` — Ruby dependencies
 - `.gitignore` — Git ignore rules
+- `CHANGELOG.md` — Synced as `XANTHAN_CHANGELOG.md` in templates
 
 ## What Stays Template-Specific
 
 These items **do not sync** and remain unique to each template:
 
 - `index.md` — Custom homepage
-- `_data/top-nav.yml` — Template-specific navigation
+- `docs/index.md` — Template-specific documentation landing page
+- `_data/` — Template-specific navigation and data files
 - `_config.yml` — Template-specific configuration (baseurl, title, description)
-- Starter/example pages (e.g., academic examples, scrollstory sample)
+- Template-specific images in `assets/images/` (backgrounds sync, others don't)
+- Starter/example pages (e.g., portfolio examples, scrollstory sample)
 - `README.md` — Template-specific setup instructions
+- `instructions.md` — Template-specific quick-start guide
 
 ## How It Works
 
-1. Developer commits changes to xanthan's `main` branch
+### Automatic Sync
+
+1. Developer commits changes to xanthan's `main` branch (in watched paths: `_includes/`, `_layouts/`, `assets/`, `docs/`, `scrollstories/`, `Gemfile`, `.gitignore`, `_config.yml`)
 2. GitHub Actions workflow triggers automatically
 3. For each template:
    - Checks out latest xanthan code
    - Checks out the template repository
    - Syncs core files using `rsync` with `--delete` (removes files that no longer exist in xanthan)
-   - Commits changes with message `"chore: sync core files from xanthan [skip ci]"`
+   - Creates detailed commit message with SHA and change stats
+   - Commits with message starting with `"chore: sync core files from xanthan [skip ci]"`
    - Pushes to template repository
+
+### Manual Trigger
+
+You can also trigger syncs manually from the Actions tab with these options:
+
+- **Dry run** — Preview changes without actually pushing (shows diff stats)
+- **Specific template** — Sync only one template instead of all (`portfolio`, `scrollstory`, `class-project`, or `all`)
 
 The `[skip ci]` tag prevents cascading workflow runs on template repos.
 
@@ -61,7 +79,7 @@ The workflow requires a GitHub token with write access to all template repositor
 
 ### Template Repository Access
 
-Each template repository must grant the `amaranth-unm` organization (or relevant user) write access.
+Each template repository must grant the `xanthan-web` organization (or the token owner) write access.
 
 ## Adding a New Template
 
@@ -77,6 +95,7 @@ To sync a new template:
 
 ```yaml
 sync-academic-template:
+  if: github.event.inputs.template == 'all' || github.event.inputs.template == 'academic' || github.event.inputs.template == ''
   runs-on: ubuntu-latest
   steps:
     - name: Checkout xanthan main
@@ -87,30 +106,71 @@ sync-academic-template:
     - name: Checkout academic-template
       uses: actions/checkout@v4
       with:
-        repository: amaranth-unm/academic-template
+        repository: xanthan-web/academic-template
         token: ${{ secrets.SYNC_TOKEN }}
         path: academic-template
 
     - name: Sync core files to academic-template
       run: |
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        echo "Syncing to academic-template"
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+        # Sync complete code libraries
         rsync -av --delete xanthan-source/_includes/ academic-template/_includes/
         rsync -av --delete xanthan-source/_layouts/ academic-template/_layouts/
-        rsync -av --delete xanthan-source/assets/ academic-template/assets/
+        rsync -av --delete xanthan-source/assets/css/ academic-template/assets/css/
+        rsync -av --delete xanthan-source/assets/js/ academic-template/assets/js/
+        rsync -av --delete xanthan-source/scrollstories/ academic-template/scrollstories/
+        rsync -av --delete --exclude='index.md' xanthan-source/docs/ academic-template/docs/
+
+        # Sync shared background images
+        rsync -av --delete xanthan-source/assets/images/backgrounds/ academic-template/assets/images/backgrounds/ 2>/dev/null || true
+
+        # Sync dependency files
         cp xanthan-source/Gemfile academic-template/Gemfile
         cp xanthan-source/.gitignore academic-template/.gitignore
+        cp xanthan-source/CHANGELOG.md academic-template/XANTHAN_CHANGELOG.md
+
         echo "✓ Synced core files to academic-template"
 
-    - name: Commit and push if changes exist
+        cd academic-template
+        git status -s
+
+    - name: Create PR or push changes
       run: |
         cd academic-template
-        if [[ -n $(git status -s) ]]; then
-          git add -A
-          git commit -m "chore: sync core files from xanthan [skip ci]"
-          git push
-          echo "✓ Changes pushed to academic-template"
-        else
+
+        if [[ -z $(git status -s) ]]; then
           echo "✓ No changes to commit"
+          exit 0
         fi
+
+        # Dry run mode - just show what would be committed
+        if [[ "${{ github.event.inputs.dry_run }}" == "true" ]]; then
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "DRY RUN - Would commit these changes:"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          git diff --stat
+          exit 0
+        fi
+
+        git add -A
+
+        # Create detailed commit message
+        COMMIT_MSG="chore: sync core files from xanthan
+
+        Synced from xanthan commit: ${{ github.sha }}
+
+        Changes:
+        $(git diff --cached --stat)
+
+        [skip ci]"
+
+        git commit -m "$COMMIT_MSG"
+        git push
+
+        echo "✓ Changes pushed to academic-template"
 ```
 
 4. Push changes to xanthan's `main`
@@ -118,14 +178,20 @@ sync-academic-template:
 
 ## Customizing Sync per Template
 
-If a template needs to exclude certain files (e.g., scrollstory excludes some guide pages):
-
-Modify the `rsync` command in that template's job:
+If a template needs to exclude certain files, use `--exclude` flags:
 
 ```yaml
-# Example: exclude scrollstories from a minimal template
-rsync -av --delete --exclude='scrollstories/' \
-  xanthan-source/_includes/ minimal-template/_includes/
+# Example: exclude sidebar.css from portfolio-template
+rsync -av --delete --exclude='sidebar.css' \
+  xanthan-source/assets/css/ portfolio-template/assets/css/
+
+# Example: exclude docs/index.md from all templates (already implemented)
+rsync -av --delete --exclude='index.md' \
+  xanthan-source/docs/ template/docs/
+
+# Example: exclude multiple files
+rsync -av --delete --exclude='file1.css' --exclude='file2.js' \
+  xanthan-source/assets/ minimal-template/assets/
 ```
 
 ## Troubleshooting
