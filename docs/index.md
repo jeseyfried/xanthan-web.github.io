@@ -7,9 +7,7 @@ summary: Complete documentation for the Xanthan framework
 
 # Xanthan Documentation
 
-This documentation matches the version of Xanthan code in your repository. For the latest features and updates, visit [xanthan-web.github.io/xanthan](https://xanthan-web.github.io/xanthan/).
-
-Choose a section to explore:
+This is the overview to the Xanthan documentation. 
 
 {% assign getting_started = site.pages | where_exp: "page", "page.path contains 'docs/getting-started'" | sort: "order" %}
 {% assign content_design = site.pages | where_exp: "page", "page.path contains 'docs/content-design'" | sort: "order" %}
