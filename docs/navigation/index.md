@@ -65,7 +65,7 @@ The left sidebar provides persistent navigation for all pages in a specific fold
 
 **When to use:** Collaborative class projects, documentation sites, any collection where it's useful to have a ToC style of list links always on the screen so readers can easily jump between related pages.
 
-**[See Left Nav Demo →](left-nav-demo)**
+**[See Left Nav Demo →](nav-left-demo)**
 
 ---
 

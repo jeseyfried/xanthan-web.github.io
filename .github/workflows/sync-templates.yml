@@ -58,7 +58,7 @@ jobs:
           # Sync complete code libraries (excludes template-specific images)
           rsync -av --delete xanthan-source/_includes/ portfolio-template/_includes/
           rsync -av --delete xanthan-source/_layouts/ portfolio-template/_layouts/
-          rsync -av --delete --exclude='sidebar.css' xanthan-source/assets/css/ portfolio-template/assets/css/
+          rsync -av --delete xanthan-source/assets/css/ portfolio-template/assets/css/
           rsync -av --delete xanthan-source/assets/js/ portfolio-template/assets/js/
           rsync -av --delete xanthan-source/scrollstories/ portfolio-template/scrollstories/
           rsync -av --delete --exclude='index.md' xanthan-source/docs/ portfolio-template/docs/
@@ -70,8 +70,11 @@ jobs:
           cp xanthan-source/Gemfile portfolio-template/Gemfile
           cp xanthan-source/.gitignore portfolio-template/.gitignore
           cp xanthan-source/CHANGELOG.md portfolio-template/XANTHAN_CHANGELOG.md
+          
+          # Sync sample data files (template-agnostic)
+          cp xanthan-source/_data/nav-profile.yml portfolio-template/_data/nav-profile.yml 2>/dev/null || true
 
-          # DO NOT sync _config.yml or _data/ - they are template-specific
+          # DO NOT sync _config.yml, nav-sections.yml, or top-nav.yml - they are template-specific
 
           echo "✓ Synced core files to portfolio-template"
 
@@ -160,8 +163,11 @@ jobs:
           cp xanthan-source/Gemfile scrollstory-template/Gemfile
           cp xanthan-source/.gitignore scrollstory-template/.gitignore
           cp xanthan-source/CHANGELOG.md scrollstory-template/XANTHAN_CHANGELOG.md
+          
+          # Sync sample data files (template-agnostic)
+          cp xanthan-source/_data/nav-profile.yml scrollstory-template/_data/nav-profile.yml 2>/dev/null || true
 
-          # DO NOT sync _config.yml or _data/ - they are template-specific
+          # DO NOT sync _config.yml, nav-sections.yml, or top-nav.yml - they are template-specific
 
           echo "✓ Synced core files to scrollstory-template"
 

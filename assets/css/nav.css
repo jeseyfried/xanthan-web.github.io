@@ -144,85 +144,13 @@ ul .dropdown-menu {
   background-color: transparent;
 }
 
+
 /*****************************************************
-SIDENAV
+SIDENAV - See nav-left.css and nav-profile.css for sidebar styling
 *****************************************************/
-.left-bar {
-  /* Positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
 
-  /* Box Model */
-  width: 25vw;
-  height: 100vh;
-  padding: var(--spacing-lg) var(--spacing-sm);
-  overflow-y: auto;
 
-  /* Visual */
-  background: var(--bg-page);
-  border-right: 1px solid var(--accent-border);
-  box-shadow: var(--shadow-md);
-}
 
-h2.left-bar-nav-section {
-  /* Box Model */
-  margin-top: 1.3rem;
-  padding-left: 0;
-
-  /* Typography */
-  font-family: var(--font-body);
-  font-size: 1.2rem;
-  letter-spacing: -0.02rem;
-  color: var(--text-body);
-
-  /* Visual */
-  border-bottom: 1px solid var(--accent-border);
-}
-
-.left-bar ul {
-  /* Box Model */
-  margin: 0 0 0 var(--spacing-sm);
-  padding: 0;
-  
-  /* Display */
-  list-style: none;
-}
-
-.left-bar-nav-item {
-  /* Box Model */
-  margin: 0 0 var(--spacing-sm) 0;
-  padding: 0;
-}
-
-.left-bar-nav-item a {
-  /* Typography */
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: normal;
-  text-decoration: none;
-  color: var(--text-body);
-
-  /* Visual */
-  border-bottom: none;
-  border-radius: 6px;
-
-  /* Interactivity */
-  transition: background-color var(--transition-fast), color var(--transition-fast);
-}
-
-.left-bar-nav-item a:hover,
-.left-bar-nav-item a.active {
-  /* Typography */
-  text-decoration: underline;
-  color: var(--accent-primary);
-}
-
-.main-content {
-  /* Box Model */
-  margin-left: 25vw;
-}
 
 
 /*****************************************************

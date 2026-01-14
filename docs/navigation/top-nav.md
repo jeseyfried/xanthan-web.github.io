@@ -50,7 +50,7 @@ Use this for grouping related pages together:
     - title: "Cards"
       url: "/navigation/cards"
     - title: "Left Navbar Demo"
-      url: "/navigation/left-nav-demo"
+      url: "/navigation/nav-left-demo"
 ```
 
 **Key points:**
