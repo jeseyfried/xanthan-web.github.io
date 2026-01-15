@@ -440,17 +440,21 @@ By completing this walkthrough, you now understand:
 **[Understanding Folders](understanding-folders)** explains how your site is organized and where to find things. Start here if you want to know what each folder does before making changes.
 
 
-### ✏️ Make Your First Edit
-**[Editing Your Site](editing-your-site)** walks you through changing text, adding pages, and uploading images—all in your browser.
+### ✏️ Make a Quick Edit
+**[Editing Your Site](editing-in-github)** walks you through changing text, adding pages, and uploading images—all in your browser.
 
 
 ### 🎨 Customize the Design
 **[Colors, Fonts, and Themes](../content-design/colors-fonts-themes)** shows you how to change your site's visual appearance to match your project's character.
 
-
 ### 🤖 Get AI Help
 **[Using AI Assistance](../content-design/using-ai-assistance)** teaches you how to work with Claude or ChatGPT to customize faster and solve problems.
 
+---
 
-### 💻 Work Locally (Optional)
+### 💻 Edit Locally (Recommended for longer-term editing)
+**[Editing Locally](editing-locally)** shows you how to get all your website files on your own computer (that's the _local_ part) and edit offline to avoid internet glitches.
+
+
+### 💻 Work Locally (Recommended for power users)
 **[Previewing Locally](previewing-locally)** shows you how to set up a local development environment so you can preview changes before publishing.
