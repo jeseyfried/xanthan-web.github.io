@@ -1,6 +1,6 @@
 ---
 title: Embedding Media
-layout: base
+layout: xanthan
 date: 2024-10-24
 header-image: /assets/images/backgrounds/pano-1.jpg 
 ---

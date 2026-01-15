@@ -1,6 +1,6 @@
 ---
 title: Color Palette Comparison
-layout: base
+layout: xanthan
 date: 2024-12-02
 ---
 

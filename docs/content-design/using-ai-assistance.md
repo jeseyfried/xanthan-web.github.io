@@ -1,6 +1,6 @@
 ---
 title: Using AI Assistance for Customization
-layout: base
+layout: xanthan
 date: 2024-12-30
 ---
 

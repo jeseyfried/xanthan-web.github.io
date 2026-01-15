@@ -1,6 +1,6 @@
 ---
 title: Adding Images
-layout: base
+layout: xanthan
 ---
 
 # Adding Images

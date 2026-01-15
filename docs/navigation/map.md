@@ -1,6 +1,6 @@
 ---
 title: Map
-layout: base
+layout: xanthan
 date: 2025-01-01
 ---
 

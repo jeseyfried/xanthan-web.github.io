@@ -1,6 +1,6 @@
 ---
 title: Content & Design
-layout: base
+layout: xanthan
 date: 2025-01-02
 ---
 

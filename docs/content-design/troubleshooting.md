@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting
-layout: base
+layout: xanthan
 date: 2024-12-02
 ---
 
@@ -166,7 +166,7 @@ Every page needs front matter at the very top:
 ```yaml
 ---
 title: My Page
-layout: base
+layout: xanthan
 date: 2024-12-02
 ---
 

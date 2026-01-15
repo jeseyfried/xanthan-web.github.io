@@ -1,6 +1,6 @@
 ---
 title: Typography
-layout: base
+layout: xanthan
 date: 2019-04-23
 ---
 

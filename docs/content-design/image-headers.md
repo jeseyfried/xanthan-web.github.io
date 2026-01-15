@@ -1,6 +1,6 @@
 ---
 title: Header Examples
-layout: base
+layout: xanthan
 date: 2024-10-24
 header-image: /assets/images/backgrounds/pano-1.jpg 
 ---
@@ -15,7 +15,7 @@ It's common to include a large image at the top of the page. In the YML header a
 ```
 ---
 title: Image Examples
-layout: base
+layout: xanthan
 date: 2025-09-13
 header-image: /assets/images/backgrounds/pano-1.jpg 
 ---
@@ -31,7 +31,7 @@ Optionally, you can also include `header-height` and/or `header-position` to bet
 ```
 ---
 title: Image Examples
-layout: base
+layout: xanthan
 date: 2025-09-13
 header-image: /assets/images/backgrounds/pano-1.jpg
 header-height: 50vh

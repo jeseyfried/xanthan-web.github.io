@@ -1,6 +1,6 @@
 ---
 title: Configuring Your Top Navigation
-layout: base
+layout: xanthan
 ---
 
 # Configuring Your Top Navigation

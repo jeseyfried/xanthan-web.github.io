@@ -1,6 +1,6 @@
 ---
 title: Xanthan enables public digital humanities work
-layout: base
+layout: xanthan
 date: 2026-01-01
 summary: A platform for digitally-engaged scholarship, teaching digital literacy, and sustainable public humanities.
 template_cards:

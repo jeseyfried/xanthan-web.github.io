@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: xanthan
 title: Getting Started
 date: 2025-10-07
 summary: Learn how to create your Xanthan site in 10 minutes with our step-by-step guide for GitHub Pages hosting.

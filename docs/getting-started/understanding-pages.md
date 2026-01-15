@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: xanthan
 title: Understanding Pages
 author: Fred Gibbs
 date: 2019-10-03
@@ -20,7 +20,7 @@ Every page starts with a small box that looks like this:
 ``` markdown
 ---
 title: Getting Started
-layout: base
+layout: xanthan
 date: 2024-12-02
 ---
 ```

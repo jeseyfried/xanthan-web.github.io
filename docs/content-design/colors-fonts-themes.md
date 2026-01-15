@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: xanthan
 title: Customizing Your Site
 ---
 

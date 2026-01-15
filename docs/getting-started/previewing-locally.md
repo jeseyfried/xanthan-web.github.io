@@ -1,6 +1,6 @@
 ---
 title: Previewing Locally
-layout: base
+layout: xanthan
 date: 2025-01-01
 ---
 

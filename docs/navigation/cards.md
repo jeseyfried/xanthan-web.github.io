@@ -1,6 +1,6 @@
 ---
 title: Directory
-layout: base
+layout: xanthan
 date: 2024-10-26
 ---
 

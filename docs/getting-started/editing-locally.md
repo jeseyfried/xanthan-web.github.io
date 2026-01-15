@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: xanthan
 title: Editing Locally
 author: Fred Gibbs
 date: 2019-10-03

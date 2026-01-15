@@ -1,6 +1,6 @@
 ---
 title: Image Examples
-layout: base
+layout: xanthan
 header-image: /assets/images/backgrounds/lake-1.jpg
 header-height: 60vh; 
 ---

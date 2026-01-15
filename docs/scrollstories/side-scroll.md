@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-layout: base
+layout: xanthan
 date: 2024-10-24
 ---
 

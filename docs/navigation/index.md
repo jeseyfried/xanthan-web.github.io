@@ -1,6 +1,6 @@
 ---
 title: Navigation & Site Organization
-layout: base
+layout: xanthan
 date: 2024-12-23
 ---
 
