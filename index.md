@@ -15,7 +15,7 @@ template_cards:
   - title: "ScrollStory"
     summary: Kinda like StoryMaps with immersive scrolling, background images, and design flexibility, but this one is non-proprietary and fundamentally collaborative.
     thumbnail: "/assets/images/forest-scroll.gif"
-    link: "scrollstories/examples/forest"
+    link: "scrollstories/forest"
 ---
 
 {: .hero-section}
