@@ -9,7 +9,7 @@ date: 2019-10-03
 
 This guide shows you how to edit your site entirely through GitHub's web interface (so no software to install). This approach is perfect for experimenting or class assignments where you're focused on a single page or two and a few images. For most student projects and straightforward edits, it works fine. You'll make changes, commit them, wait a minute or two, and see your updates live on your website.
 
-**When you might want something else:** If you're building a site with lots of pages or are making frequent updates, check out the [Working Locally](working-locally) guide. 
+**When you might want something else:** If you're building a site with lots of pages or are making frequent updates, check out the [Working Locally](editing-locally) guide. 
 
 
 ## Editing a Page

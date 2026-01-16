@@ -1,10 +1,11 @@
 {
-  "name": "xanthan-demo-scripts",
-  "version": "1.0.0",
-  "description": "Puppeteer scripts for recording Xanthan tutorial videos",
+  "name": "xanthan-scripts",
+  "version": "1.1.0",
+  "description": "Utility scripts for Xanthan (demos and link checker)",
   "main": "github-workflow-demo.js",
   "scripts": {
-    "demo": "node github-workflow-demo.js"
+    "demo": "node github-workflow-demo.js",
+    "check:links": "node broken-links.js"
   },
   "keywords": [
     "puppeteer",
