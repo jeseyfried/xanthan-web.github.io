@@ -36,11 +36,11 @@
     - divider: true
     - title: "Using AI Assistance"
       url: "/docs/content-design/ai-overview"
-    - title: "Using AI Assistance"
+    - title: "Tips for Using AI"
       url: "/docs/content-design/ai-tips"
-    - title: "Using AI Assistance"
+    - title: "Examples of AI Assistance"
       url: "/docs/content-design/ai-examples"
-    - title: "Using AI Assistance"
+    - title: "Using AI for Xantan Design System"
       url: "/docs/content-design/ai-design-system"
     - divider: true
     - title: "General Troubleshooting"
