@@ -35,8 +35,15 @@
       url: "/docs/content-design/colors-fonts-themes"
     - divider: true
     - title: "Using AI Assistance"
-      url: "/docs/content-design/using-ai-assistance"
-    - title: "Troubleshooting"
+      url: "/docs/content-design/ai-overview"
+    - title: "Using AI Assistance"
+      url: "/docs/content-design/ai-tips"
+    - title: "Using AI Assistance"
+      url: "/docs/content-design/ai-examples"
+    - title: "Using AI Assistance"
+      url: "/docs/content-design/ai-design-system"
+    - divider: true
+    - title: "General Troubleshooting"
       url: "/docs/content-design/troubleshooting"
 
 - title: "Navigation"
