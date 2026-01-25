@@ -44,7 +44,7 @@ As you start working with AI to change the styling on your website, keep in mind
 - Starting with very small changes will give you important practice
 - Making changes in your CSS files affects all the pages on the website
 - [Previewing locally](previewing-locally) allows for a faster process
-- To revert to an earlier version of a file after multiple Commits, you have to copy-paste from the record of that earlier Commit in your GitHub repository on the web
+- To revert to an earlier version of a file after multiple Commits, you will need to copy-paste from the record of that earlier Commit in your GitHub repository on the web
 
 ## Privacy Note
 
